@@ -12,6 +12,9 @@ def index_get():
 def predict():
     text=request.get_json().get("message")
     #TODO :check if text is valid
+    if text is None or text.strip() == "":
+        return jsonify({"answer": "Invalid input."})
+    
     response=get_response(text)
     message = {"answer":response}
     return jsonify(message)
