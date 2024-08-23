@@ -1,10 +1,8 @@
-import nltk
+
 from flask import Flask, render_template, request, jsonify
 from nltk.tokenize import word_tokenize
 from chat import get_response
 from flask_cors import CORS
-
-nltk.download('punkt')
 
 app = Flask(__name__)
 CORS(app)
