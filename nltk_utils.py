@@ -5,6 +5,8 @@ from nltk.stem.porter import PorterStemmer
 
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
+
 
 stemmer = PorterStemmer()
 
